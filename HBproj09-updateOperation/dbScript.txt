@@ -1,0 +1,3 @@
+ AN                                                    NOT NULL NUMBER(20)
+ ACCOUNTNAME                                                    VARCHAR2(20)
+ SALARY                                                         NUMBER(20)

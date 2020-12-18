@@ -1,0 +1,6 @@
+=>increments generator use formula to generate value is max val+1 for all number type p
+roperties
+=>works with all database
+=> if db table is empty ghen it generates 1 as the identity values
+=> suitable in multiThreaded env but not suitable in clistered env(multiple comupter like gmail )
+

@@ -1,0 +1,7 @@
+ product;
+ Name                                                  Null?    Type
+ ----------------------------------------------------- -------- ------------------------------------
+ PID                                                   NOT NULL NUMBER(10)
+ PNAME                                                          VARCHAR2(45)
+ PRICE                                                          FLOAT(45)
+ QTY                                                            FLOAT(45)

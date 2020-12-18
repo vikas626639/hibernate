@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+	<hibernate-mapping>
+	<class name="com.hibernate.entity.PersonInfo">
+	<id name="personid" type="int">
+	<generator class="identity"/></id>
+	<property name="person_name" type="string"></property>
+	<property name="person_addrs" type="string"></property>
+	<property name="dof" type="timestamp"></property>
+	<property name="doj" type="timestamp"></property>
+	<property name="dom" type="timestamp"></property>
+	</class>
+	</hibernate-mapping>
+	
+	<!-- here date type format not inserting the time also in the database
+	so that we have to choose another data type which is timestamp
+	by mentioning timestamp it will insert date and time also in the database -->
