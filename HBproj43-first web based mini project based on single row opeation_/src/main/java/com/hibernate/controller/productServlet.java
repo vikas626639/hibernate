@@ -15,7 +15,7 @@ import com.hibernate.service.ProductServiceImpl;
 import com.hibernate.service.productService;
 
 
-@WebServlet({ "/productServlet", "/controller" })
+@WebServlet({"/controller" })
 public class productServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;

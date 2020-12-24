@@ -25,13 +25,13 @@ public class ProductServiceImpl implements productService {
 		if(prod!=null) {
 			dto=new ProductDto();
 			dto.setPID(prod.getPID());
-			dto.setPNAME(prod.getPNAME());
+			dto.setPNAME(prod.getPNAME().toUpperCase());
 			dto.setPRICE((double) Math.round(prod.getPRICE()));
 			dto.setQTY(Math.round(prod.getQTY()));
 			if(dto.getPRICE()<1000)
-				dto.setCatagory("affordable");
+				dto.setCatagory("affordable".toUpperCase());
 			else 
-				dto.setCatagory("premium");
+				dto.setCatagory("premium".toUpperCase());
 			return dto;
 		}
 		else {
