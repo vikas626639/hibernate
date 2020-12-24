@@ -17,8 +17,8 @@
 		<property name="hibernate.hikari.maximumPoolsize">20</property>
 		<property name="hibernate.hikari.idleTimeout">30000</property> -->
 		
-		<!-- configuration of hikaricp property -->
 		<!-- takes 20 sec time before thrwing error..when pool can not give jdbc con object -->
+		<!-- configuration of hikaricp property -->
 		<property name="hibernate.hikari.connectionTimeout">20000</property>
 		<!-- when pool is created it maintains 10 jdbc con object -->
 		<property name="hibernate.hikari.minimumIdle">10</property>
