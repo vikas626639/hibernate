@@ -33,10 +33,6 @@
 <br>
 <a href="index.html">home page</a>
 
-
-
-
-
 <%-- <%
 	if (request.getAttribute("ptdo") != null) {
 %>
