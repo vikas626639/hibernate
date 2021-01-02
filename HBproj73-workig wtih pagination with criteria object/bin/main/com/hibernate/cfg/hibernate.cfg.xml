@@ -16,7 +16,7 @@
 		<!-- if any con object in the pool is idle for 30 sec then it will be destroyed -->
 		<property name="hibernate.hikari.idleTimeout">30000</property>
 
-		<!-- configure the hibernate property -->
+		<!-- configure the hibernate_property -->
 		<property name="show_sql">true</property>
 		<property name="format_sql">true</property>
 		<property name="hbm2ddl.auto">update</property>
