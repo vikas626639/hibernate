@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.hibernate.entity">
+	<class name="Person" discriminator-value="per">
+		<id name="id">
+			<generator class="identity"></generator>
+		</id>
+		<discriminator column="Person_type" type="string"></discriminator>
+		<property name="name" type="string"></property>
+		<property name="addrs" type="string"></property>
+		
+		<subclass name="Student" discriminator-value="student">
+			<property name="college" type="string"></property>
+			<property name="branch" type="string"></property>
+			<property name="avg" type="float" scale="2" precision="3"></property>
+		</subclass>
+
+		<subclass name="Employee" discriminator-value="employee">
+			<property name="desg" type="string"></property>
+			<property name="salary" type="float" scale="2" precision="3"></property>
+			<property name="deptno" type="int"></property>
+		</subclass>
+	</class>
+</hibernate-mapping>
