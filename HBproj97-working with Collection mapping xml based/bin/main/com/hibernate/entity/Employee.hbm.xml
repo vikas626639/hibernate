@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.hibernate.entity">
+	<class name="Employee">
+		<id name="Emp_Id">
+			<generator class="identity"></generator>
+		</id>
+		<property name="Emp_name" type="string"></property>
+		<property name="JOb" type="string"></property>
+
+		<list name="Emp_Frends" table="Employee_Frends">
+			<key column="Emp_Id"></key>
+			<list-index column="frend_no" base="1" />
+			<element column="FRINEDS" type="string" />
+		</list>
+
+		<set name="mobile_number" table="Employee_mobile_number">
+			<key column="Emp_Id"></key>
+			<element column="mobile_number" type="long"></element>
+		</set>
+
+		<map name="Bank_Account" table="Employee_Bank_Account">
+			<key column="Emp_Id"/>
+			<map-key column="Bank_Account" type="string"></map-key>
+			<element column="Bank_name" type="string"></element>
+		</map>
+
+	</class>
+</hibernate-mapping>
